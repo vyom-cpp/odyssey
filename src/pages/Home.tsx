@@ -39,7 +39,7 @@ const Home: React.FC = () => {
                         }}
                     >
                         <Typography
-                            fontSize={isSmallScreen ? 35 : 100}
+                            fontSize={isSmallScreen ? 35 : 80}
                             fontFamily={theme.typography.fontFamily}
                             sx={{
                                 color: "white",
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
                         </Typography>
 
                         <Typography
-                            fontSize={isSmallScreen ? 25 : 30}
+                            fontSize={isSmallScreen ? 25 : 32}
                             fontFamily={theme.typography.fontFamily}
                             sx={{
                                 color: "white",

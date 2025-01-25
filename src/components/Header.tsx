@@ -113,7 +113,7 @@ const NavbarXl = () => {
                             <Link
                                 fontSize={18}
                                 fontWeight={150}
-                                fontFamily={theme.typography.fontFamily}
+                                fontFamily={'Barlow Condensed'}
                                 underline="hover"
                                 sx={{
                                     color: "white",

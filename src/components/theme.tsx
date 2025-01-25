@@ -1,6 +1,7 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
 import "@fontsource/open-sans/400.css"
 import "@fontsource/roboto/400.css"
+import "@fontsource/marcellus/400.css"
 import "@fontsource/barlow-condensed/400.css"
 export const theme = responsiveFontSizes(
     createTheme({
@@ -16,7 +17,7 @@ export const theme = responsiveFontSizes(
             },
         },
         typography: {
-            fontFamily: ['Barlow Condensed', 'Roboto', 'Open Sans'].join(','),
+            fontFamily: ['Marcellus', 'Barlow Condensed', 'Roboto', 'Open Sans'].join(','),
             h1: {
                 fontSize: '5rem',
                 fontFamily: 'Raleway',
