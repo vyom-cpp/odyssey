@@ -65,12 +65,15 @@ export const Navbar: React.FC = () => {
                 backgroundColor: 'transparent',
                 zIndex: 1000,
                 marginTop: isMobile
-                    ? "none"
-                    : "0.1%",
+                                    ? "none"
+                                    : "0.1%",
                 padding: "1rem",
             }}
         >
-            {isMobile ? <NavbarSm /> : <NavbarXl />}
+            {isMobile 
+                    ? <NavbarSm /> 
+                    : <NavbarXl />
+            }
         </Container>
     );
 };
@@ -117,7 +120,9 @@ const NavbarXl = () => {
                                 underline="hover"
                                 sx={{
                                     color: "white",
-                                    textDecoration: page.route.startsWith('/') ? handleUnderline(page.route) : "none",
+                                    textDecoration: page.route.startsWith('/') 
+                                                                            ? handleUnderline(page.route) 
+                                                                            : "none",
                                     textDecorationThickness: "2px",
                                     textDecorationStyle: "solid",
                                     textUnderlineOffset: "5px",
@@ -279,7 +284,9 @@ const NavbarSm: React.FC = () => {
                                         variant="h4"
                                         onClick={() => handleClick(page.route)}
                                         sx={{
-                                            textDecoration: page.route.startsWith('/') ? handleUnderline(page.route) : "none",
+                                            textDecoration: page.route.startsWith('/') 
+                                                                                    ? handleUnderline(page.route) 
+                                                                                    : "none",
                                             textDecorationThickness: "2px",
                                             textDecorationStyle: "solid",
                                             textUnderlineOffset: "5px",

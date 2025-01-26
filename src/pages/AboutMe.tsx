@@ -1,4 +1,3 @@
-// Small Screen nu karvanu baki che haju aama
 import React, { useEffect } from "react";
 import { Navbar } from "../components/Header";
 import { Container, Box, Typography, useMediaQuery } from "@mui/material";
@@ -10,6 +9,7 @@ const About: React.FC = () => {
     }, []);
 
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+    const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
 
     return (
         <div>
@@ -20,7 +20,10 @@ const About: React.FC = () => {
                 <Box
                     sx={{
                         display: "flex",
-                        flexDirection: isSmallScreen ? "column" : "row",
+                        flexDirection: isSmallScreen 
+                                                    ? "column" 
+                                                    : "row",
+
                         alignItems: "center",
                         justifyContent: "center",
                         p: 4,
@@ -28,35 +31,54 @@ const About: React.FC = () => {
                 >
                     <Box
                         sx={{
-                            minWidth: isSmallScreen ? '' : '1000px',
-
-
+                            minWidth: isSmallScreen 
+                                                    ? '' 
+                                                    : isMediumScreen 
+                                                                    ? '80%' 
+                                                                    : '1000px',
                         }}
                     >
                         <Typography
-                            fontSize={isSmallScreen ? 35 : 65}
+                            fontSize={isSmallScreen ? 30 : 65}
                             fontFamily={theme.typography.fontFamily}
                             gutterBottom
                             sx={{
-                                marginTop: isSmallScreen ? '' : '12%',
-                                marginLeft: isSmallScreen ? '' : '22%'
+                                marginTop: isSmallScreen 
+                                                        ? '12%' 
+                                                        : '12%',
+
+                                marginLeft: isSmallScreen 
+                                                        ? '' 
+                                                        : '22%'
                             }}
                         >
                             About Me
                         </Typography>
                         <hr
                             style={{
-                                marginTop: isSmallScreen ? '' : '-2%',
-                                marginLeft: isSmallScreen ? '' : '22%'
+                                marginTop: isSmallScreen  
+                                                        ? '-2%' 
+                                                        : '-2%',
+
+                                marginLeft: isSmallScreen 
+                                                        ? '' 
+                                                        : '22%'
                             }}
                         />
                         <Typography
-                            fontSize={isSmallScreen ? 35 : 25}
+                            fontSize={isSmallScreen ? 22 : 25}
                             fontFamily={theme.typography.fontFamily}
                             sx={{
                                 // textAlign: 'center',
-                                marginTop: isSmallScreen ? '' : '5%',
-                                marginLeft: isSmallScreen ? '' : '22%'
+                                marginTop: isSmallScreen 
+                                                        ? '5%' 
+                                                        : '5%',
+
+                                marginLeft: isSmallScreen 
+                                                        ? '' 
+                                                        : '22%',
+
+                                textWrap: 'wrap'
 
                             }}
                         >
