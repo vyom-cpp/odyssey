@@ -49,7 +49,10 @@ const About: React.FC = () => {
 
                                 marginLeft: isSmallScreen 
                                                         ? '' 
-                                                        : '22%'
+                                                        : '22%',
+                                textAlign: isSmallScreen 
+                                                        ? 'center'
+                                                        : ''
                             }}
                         >
                             About Me
@@ -69,7 +72,10 @@ const About: React.FC = () => {
                             fontSize={isSmallScreen ? 22 : 25}
                             fontFamily={theme.typography.fontFamily}
                             sx={{
-                                // textAlign: 'center',
+                                textAlign: isSmallScreen 
+                                                        ? 'center'
+                                                        : '',
+                                                        
                                 marginTop: isSmallScreen 
                                                         ? '5%' 
                                                         : '5%',

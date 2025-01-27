@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Navbar } from "../components/Header";
-import { Box, Typography, Container, useMediaQuery } from "@mui/material";
+import { Box, Typography, Container, } from "@mui/material";
 import { theme } from "../components/theme";
 import Typewriter from "typewriter-effect";
 
@@ -9,58 +9,74 @@ const Home: React.FC = () => {
         document.title = "Beginning";
     }, []);
 
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-
     return (
-        <div>
-            <Container disableGutters maxWidth={false} sx={{ minHeight: "100vh", width: "100%" }}>
-
+        <Box sx={{
+            width: '100%',
+            minHeight: '100vh',
+            overflowX: 'hidden',
+            position: 'relative'
+        }}>
+            <Container
+                maxWidth="xl"
+                sx={{
+                    px: {
+                        xs: 2,
+                        sm: 3,
+                        md: 4,
+                        lg: 6
+                    },
+                    minHeight: "100vh",
+                    display: 'flex',
+                    flexDirection: 'column'
+                }}>
                 <Navbar />
 
-                {/* About Section */}
+                {/* About */}
                 <Box
                     sx={{
                         display: "grid",
-                        gridTemplateColumns: isSmallScreen 
-                                                         ? "1fr" 
-                                                         : "1fr 1fr",
-
-                        minHeight: "90vh",
-                        gap: 4,
+                        gridTemplateColumns: {
+                            xs: "1fr",
+                            sm: "1fr",
+                            md: "1fr 1fr",
+                            lg: "1.2fr 0.8fr"
+                        },
+                        flex: 1,
+                        width: '100%',
+                        gap: {
+                            xs: 4, md: 6, lg: 8
+                        },
                         alignItems: "center",
-                        pt: 8,
+                        pt: { xs: 8, md: 10, lg: 12 },
+                        pb: { xs: 4, md: 6, lg: 8 }
                     }}
                 >
-                    {/* Text Section */}
+
                     <Box
                         sx={{
                             display: "flex",
                             flexDirection: "column",
                             gap: 3,
-                            pl: { xs: 2, md: 8 },
-                            order: isSmallScreen 
-                                                ? 1 
-                                                : 0,
+                            order: { xs: 1, md: 0 },
+                            width: '100%',
+                            maxWidth: { md: "90%", lg: "80%" },
+                            mx: 'auto'
                         }}
                     >
                         <Typography
-                            fontSize={isSmallScreen ? 35 : 80}
-                            fontFamily={theme.typography.fontFamily}
+                            variant="h1"
                             sx={{
                                 color: "white",
-                                marginTop: isSmallScreen 
-                                                        ? "5%" 
-                                                        : "-20%",
-
-                                marginLeft: isSmallScreen 
-                                                        ? "" 
-                                                        : "10%",
-
-                                textAlign: isSmallScreen 
-                                                        ? 'left' 
-                                                        : '',
-
-                                textWrap: 'wrap'
+                                fontSize: {
+                                    xs: '2.5rem',
+                                    sm: '3rem',
+                                    md: '4rem',
+                                    lg: '5rem'
+                                },
+                                fontFamily: theme.typography.fontFamily,
+                                lineHeight: { xs: 1.2, md: 1.3, lg: 1.4 },
+                                mt: { xs: 2, md: 0 },
+                                wordBreak: 'break-word'
                             }}
                         >
                             I'm Vyom
@@ -75,56 +91,34 @@ const Home: React.FC = () => {
                         </Typography>
 
                         <Typography
-                            fontSize={isSmallScreen ? 25 : 32}
-                            fontFamily={theme.typography.fontFamily}
+                            variant="h2"
                             sx={{
                                 color: "white",
-                                marginTop: isSmallScreen 
-                                                        ? "-5%" 
-                                                        : "-2%",
-
-                                marginLeft: isSmallScreen 
-                                                        ? "" 
-                                                        : "10%",
-
-                                textAlign: isSmallScreen 
-                                                        ? 'left' 
-                                                        : '',
-                                                        
-                                textWrap: 'wrap'
+                                fontSize: {
+                                    xs: '1.5rem',
+                                    sm: '1.75rem',
+                                    md: '2rem',
+                                    lg: '2.5rem'
+                                },
+                                fontFamily: theme.typography.fontFamily,
+                                lineHeight: 1.3,
+                                maxWidth: { md: "90%", lg: "100%" },
+                                wordBreak: 'break-word'
                             }}
                         >
                             A sane Icarus who know not to fly too high
                         </Typography>
-
                     </Box>
 
-                    
-
-                    {/* Image Section */}
+                    {/* Image */}
                     <Box
                         sx={{
-                            display: "block",
-                            justifyContent: isSmallScreen 
-                                                        ? "center" 
-                                                        : "flex-end",
-
-                            alignItems: "center",
-                            flexDirection: isSmallScreen 
-                                                        ? "column" 
-                                                        : "row",
-
-                            order: isSmallScreen 
-                                                ? 0 
-                                                : 1,
-
-                            width: "90%",
-                            height: "auto",
-                            margin: isSmallScreen 
-                                                ? "20px auto 0" 
-                                                : "auto",
-
-                            maxWidth: "100%",
+                            order: { xs: 0, md: 1 },
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            position: 'relative'
                         }}
                     >
                         <Box
@@ -132,35 +126,22 @@ const Home: React.FC = () => {
                             src="/Icarus.jpg"
                             alt="Profile"
                             sx={{
-                                width: isSmallScreen 
-                                                    ? "100%" 
-                                                    : "100%",
-
-                                height: isSmallScreen 
-                                                    ? '100%' 
-                                                    : 'auto',
-
-                                aspectRatio: isSmallScreen 
-                                                            ? 'auto' 
-                                                            : '6 / 6',
-
-                                alignItems: "center",
-                                marginBottom: isSmallScreen 
-                                                            ? '-10%' 
-                                                            : '-2%',
-
-                                marginLeft: isSmallScreen   
-                                                            ? '0' 
-                                                            : '60%',
-                                                            
+                                width: {
+                                    xs: '100%',
+                                    sm: '150%',
+                                    md: '105%',
+                                    lg: '200%'
+                                },
+                                maxWidth: '600px',
+                                height: 'auto',
+                                aspectRatio: '1 / 1',
                                 objectFit: "cover",
-                                boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
                             }}
                         />
                     </Box>
                 </Box>
             </Container>
-        </div>
+        </Box>
     );
 };
 
