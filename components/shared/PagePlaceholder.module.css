@@ -1,0 +1,83 @@
+.page {
+  min-height: 100svh;
+  position: relative;
+  overflow: clip;
+  background:
+    radial-gradient(circle at 70% 38%, rgba(245, 242, 234, 0.11), transparent 24rem),
+    radial-gradient(circle at 22% 80%, rgba(212, 175, 90, 0.06), transparent 20rem),
+    linear-gradient(180deg, #070807 0%, #090909 55%, #050505 100%);
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.28;
+  background-image: radial-gradient(color-mix(in srgb, var(--foreground) 32%, transparent) 0.6px, transparent 0.8px);
+  background-size: 4px 4px;
+}
+
+.shell {
+  width: min(90vw, 900px);
+  min-height: 100svh;
+  margin-inline: auto;
+  padding-block: clamp(4rem, 10vh, 6rem) 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 700ms ease both;
+}
+
+.label {
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.shell h1 {
+  max-width: 760px;
+  color: var(--foreground);
+  font-family: var(--font-display);
+  font-size: clamp(4.6rem, 10vw, 9rem);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: 0;
+}
+
+.description {
+  max-width: 36rem;
+  margin-block: 2rem 2.6rem;
+  color: rgba(245, 242, 234, 0.72);
+  font-size: clamp(1rem, 1.35vw, 1.22rem);
+  line-height: 1.8;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .shell {
+    width: min(90vw, 30rem);
+    align-items: stretch;
+  }
+
+  .shell h1 {
+    font-size: clamp(3.5rem, 18vw, 5.6rem);
+  }
+}

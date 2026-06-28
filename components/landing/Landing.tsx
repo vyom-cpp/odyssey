@@ -1,14 +1,20 @@
 import styles from "./Landing.module.css";
 import HeroCard from "../hero/HeroCard";
+import FeaturedWork from "../projects/FeaturedWork";
+import PhotographyPreview from "./PhotographyPreview";
+import ShelfPreview from "../shelf/ShelfPreview";
+import ContactCTA from "../contact/ContactCTA";
+import Footer from "../layout/Footer";
 
 const cards = [
   {
     title: "TaskFlow",
-    subtitle: "MERN Task Management Platform",
+    subtitle: "Task Management Platform",
     imageSrc:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
     imageAlt: "Dark analytics dashboard on a workspace screen",
     className: styles.cardOne,
+    href: "/work/taskflow",
   },
   {
     title: "Photography",
@@ -17,6 +23,7 @@ const cards = [
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
     imageAlt: "Mountain peak at dusk",
     className: styles.cardTwo,
+    href: "/shelf#photography",
   },
   {
     title: "Poetry",
@@ -25,6 +32,7 @@ const cards = [
       "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
     imageAlt: "Pen resting on handwritten poetry",
     className: styles.cardThree,
+    href: "/shelf#poetry",
   },
 ];
 
@@ -33,7 +41,7 @@ export default function Landing() {
     <main className={styles.landing}>
       <section className={styles.hero} aria-label="Odyssey introduction">
         <div className={styles.content}>
-          <p className={styles.eyebrow}>HELLO, I&apos;m Vyom</p>
+          <p className={styles.eyebrow}>HELLO, I&apos;M VYOM</p>
 
           <h1 className={styles.title}>
             Crafting
@@ -72,6 +80,7 @@ export default function Landing() {
               imageSrc={card.imageSrc}
               imageAlt={card.imageAlt}
               className={card.className}
+              href={card.href}
             />
           ))}
         </div>
@@ -84,6 +93,13 @@ export default function Landing() {
           N
         </div>
       </section>
+
+      <FeaturedWork />
+      <PhotographyPreview />
+      <ShelfPreview />
+      <ContactCTA />
+      <Footer />
     </main>
   );
 }
+

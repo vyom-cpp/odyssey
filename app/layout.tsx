@@ -6,6 +6,7 @@ import {
 } from "next/font/google";
 
 import "./globals.css";
+import CustomCursor from "@/components/shared/CustomCursor";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,7 +43,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+      </head>
       <body
         className={`
           ${inter.variable}
@@ -51,6 +54,7 @@ export default function RootLayout({
           antialiased
         `}
       >
+        <CustomCursor />
         {children}
       </body>
     </html>

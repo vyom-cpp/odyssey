@@ -1,0 +1,109 @@
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(4rem, 10vh, 6rem) 5% 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.backNav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--subtle);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+  transition: color 300ms ease;
+  align-self: flex-start;
+}
+
+.backNav:hover {
+  color: var(--foreground);
+}
+
+.label {
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.title {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 4rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.inputGroup label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.input, .textarea {
+  background: color-mix(in srgb, var(--foreground) 2%, transparent);
+  border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+  padding: 1.2rem;
+  border-radius: var(--radius-sm);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input:focus, .textarea:focus {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--foreground) 4%, transparent);
+}
+
+.textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submitBtn {
+  background: var(--foreground);
+  color: var(--background);
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.submitBtn:hover {
+  transform: scale(1.02);
+  background: var(--accent);
+}

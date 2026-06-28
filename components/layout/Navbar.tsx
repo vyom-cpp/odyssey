@@ -26,10 +26,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button className={styles.theme} aria-label="Toggle theme">
-          ☼
-        </button>
-
         <button
           className={styles.menuButton}
           type="button"
@@ -59,3 +55,4 @@ export default function Navbar() {
     </header>
   );
 }
+

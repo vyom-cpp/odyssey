@@ -1,0 +1,84 @@
+.hero {
+  padding: clamp(4rem, 10vh, 6rem) 5% clamp(4rem, 10vh, 8rem);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--foreground);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+.processList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .processList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .processList {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.processItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.processNumber {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+  padding-bottom: 1rem;
+}
+
+.processTitle {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.processDesc {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}

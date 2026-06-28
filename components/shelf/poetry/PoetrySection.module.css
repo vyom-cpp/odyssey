@@ -1,0 +1,139 @@
+.hero {
+  padding: clamp(4rem, 10vh, 6rem) 5% clamp(4rem, 10vh, 8rem);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--subtle);
+}
+
+.poemContainer {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.poemContent {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  color: var(--foreground);
+  line-height: 2.2;
+  white-space: pre-wrap;
+  margin-bottom: 4rem;
+}
+
+.poemContent p {
+  margin-bottom: 2rem;
+}
+
+.recentSection {
+  margin-top: 8rem;
+  padding-top: 4rem;
+  border-top: 1px solid color-mix(in srgb, var(--foreground) 8%, transparent);
+}
+
+.recentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .recentGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.poemCard {
+  background: color-mix(in srgb, var(--foreground) 2%, transparent);
+  border: 1px solid color-mix(in srgb, var(--foreground) 5%, transparent);
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 400ms ease;
+}
+
+.poemCard:hover {
+  background: color-mix(in srgb, var(--foreground) 4%, transparent);
+  border-color: rgba(212, 175, 90, 0.2);
+  transform: translateY(-2px);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.cardExcerpt {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 1.05rem;
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+.notesSection {
+  margin-top: 6rem;
+  padding: 4rem;
+  background: color-mix(in srgb, var(--foreground) 2%, transparent);
+  border-radius: var(--radius-lg);
+  margin-bottom: 8rem;
+}
+
+.notesTitle {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.notesText {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.backNav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--subtle);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+  transition: color 300ms ease;
+}
+
+.backNav:hover {
+  color: var(--foreground);
+}

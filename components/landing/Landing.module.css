@@ -15,8 +15,8 @@
   pointer-events: none;
   opacity: 0.34;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb, var(--foreground) 1.8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--foreground) 1.4%, transparent) 1px, transparent 1px);
   background-size: 3rem 3rem;
   mask-image: radial-gradient(circle at 62% 42%, black, transparent 72%);
 }
@@ -27,7 +27,7 @@
   inset: 0;
   pointer-events: none;
   opacity: 0.18;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.36) 0.6px, transparent 0.8px);
+  background-image: radial-gradient(color-mix(in srgb, var(--foreground) 36%, transparent) 0.6px, transparent 0.8px);
   background-size: 4px 4px;
   mix-blend-mode: screen;
 }

@@ -1,0 +1,49 @@
+.dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate3d(-50%, -50%, 0);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+  mix-blend-mode: difference;
+}
+
+.dotHover {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
+  will-change: transform;
+}
+
+.ringHover {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(212, 175, 90, 0.1);
+  border-color: rgba(212, 175, 90, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.ringMagnetic {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(212, 175, 90, 0.15);
+  border-color: rgba(212, 175, 90, 0.8);
+}
