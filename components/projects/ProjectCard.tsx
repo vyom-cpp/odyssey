@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { StaticImageData } from "next/image";
 import styles from "./ProjectCard.module.css";
 
 type ProjectCardProps = {
@@ -7,7 +8,7 @@ type ProjectCardProps = {
   category: string;
   year: string;
   description: string;
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   imageAlt: string;
   href: string;
   tags?: string[];

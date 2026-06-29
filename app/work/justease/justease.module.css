@@ -31,9 +31,7 @@
 }
 
 .heroImage {
-  position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg);
   overflow: hidden;
   margin-top: 4rem;
@@ -41,7 +39,9 @@
 }
 
 .image {
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
   filter: saturate(0.9) contrast(1.1);
 }
 
@@ -89,6 +89,7 @@
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--foreground);
   margin-bottom: 1.5rem;
+  margin-top: -2.5rem;
 }
 
 .text {
@@ -166,7 +167,8 @@
   flex-wrap: wrap;
 }
 
-.btnPrimary, .btnSecondary {
+.btnPrimary,
+.btnSecondary {
   padding: 1rem 2rem;
   border-radius: 2rem;
   font-size: 0.95rem;

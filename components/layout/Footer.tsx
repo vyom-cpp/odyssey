@@ -3,7 +3,7 @@
 import styles from "./Footer.module.css";
 
 const socials = [
-  { name: "GitHub", href: "https://github.com" },
+  { name: "GitHub", href: "https://github.com/vyom-cpp" },
   { name: "LinkedIn", href: "https://linkedin.com" },
   { name: "Twitter", href: "https://twitter.com" },
   { name: "Read.cv", href: "https://read.cv" },
@@ -53,8 +53,8 @@ export default function Footer() {
 
           <div className={styles.contactCol}>
             <p className={styles.label}>Email</p>
-            <a href="mailto:hello@vyom.dev" className={styles.email}>
-              hello@vyom.dev
+            <a href="mailto:vyom.sutariya0948@gmail.com" className={styles.email}>
+              vyom.sutariya0948@gmail.com
             </a>
           </div>
 

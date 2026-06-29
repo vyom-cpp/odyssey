@@ -1,14 +1,14 @@
-import Section from "../shared/Section";
-import Button from "../shared/Button";
+import Section from "@/components/shared/Section";
+import Button from "@/components/shared/Button";
 import styles from "./ContactCTA.module.css";
-import FadeIn from "../shared/FadeIn";
+import FadeIn from "@/components/shared/FadeIn";
 
 export default function ContactCTA() {
   return (
     <Section id="contact-cta" className={styles.sectionOverride}>
       <div className={styles.wrapper}>
         <FadeIn direction="up">
-          <p className={styles.eyebrow}>04 // SAY HELLO</p>
+          <p className={styles.eyebrow}>SAY HELLO</p>
           <h2 className={styles.heading}>
             Let&apos;s build something
             <br />

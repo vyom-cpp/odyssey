@@ -3,10 +3,10 @@ import Link from "next/link";
 import FadeIn from "@/components/shared/FadeIn";
 import Section from "@/components/shared/Section";
 import Footer from "@/components/layout/Footer";
-import styles from "./taskflow.module.css";
-import taskflowImg from "./taskflow.png";
+import styles from "./vgec-rocketry.module.css";
+import vgecRocketryImg from "./vgec-rocketry.png";
 
-export default function TaskFlowPage() {
+export default function VGECRocketryPage() {
   return (
     <main>
       <header className={styles.hero}>
@@ -41,7 +41,7 @@ export default function TaskFlowPage() {
 
           <div className={styles.heroImage}>
             <Image
-              src={taskflowImg}
+              src={vgecRocketryImg}
               alt="TaskFlow Dashboard Interface"
               className={styles.image}
               priority

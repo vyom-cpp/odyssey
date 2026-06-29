@@ -1,8 +1,8 @@
-import Section from "../shared/Section";
-import SectionTitle from "../shared/SectionTitle";
-import Button from "../shared/Button";
+import Section from "@/components/shared/Section";
+import SectionTitle from "@/components/shared/SectionTitle";
+import Button from "@/components/shared/Button";
 import styles from "./ShelfPreview.module.css";
-import FadeIn from "../shared/FadeIn";
+import FadeIn from "@/components/shared/FadeIn";
 
 const items = [
   {

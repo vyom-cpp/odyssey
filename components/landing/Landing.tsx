@@ -2,8 +2,8 @@ import styles from "./Landing.module.css";
 import HeroCard from "../hero/HeroCard";
 import FeaturedWork from "../projects/FeaturedWork";
 import PhotographyPreview from "./PhotographyPreview";
-import ShelfPreview from "../shelf/ShelfPreview";
-import ContactCTA from "../contact/ContactCTA";
+import ShelfPreview from "@/app/shelf/ShelfPreview";
+import ContactCTA from "@/app/contact/ContactCTA";
 import Footer from "../layout/Footer";
 
 const cards = [

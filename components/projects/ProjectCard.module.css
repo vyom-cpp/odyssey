@@ -126,7 +126,7 @@
 .imageContainer {
   position: relative;
   width: 100%;
-  aspect-ratio: 1.6;
+  aspect-ratio: 16 / 9;
   border-radius: var(--radius-md);
   overflow: hidden;
   background: linear-gradient(180deg, #222, #0d0d0d);
@@ -166,9 +166,5 @@
 @media (max-width: 767px) {
   .link {
     padding: 1.25rem;
-  }
-
-  .imageContainer {
-    aspect-ratio: 1.5;
   }
 }

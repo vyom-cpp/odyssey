@@ -1,5 +1,11 @@
-import AboutPage from "@/components/about/About";
+import PagePlaceholder from "@/components/shared/PagePlaceholder";
 
-export default function About() {
-  return <AboutPage />;
+export default function AboutPage() {
+  return (
+    <PagePlaceholder
+      label="ENGINEER"
+      title="About."
+      description="under construction"
+    />
+  );
 }
