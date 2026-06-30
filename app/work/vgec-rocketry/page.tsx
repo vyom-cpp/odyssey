@@ -14,10 +14,9 @@ export default function VGECRocketryPage() {
           <Link href="/work" className={styles.backNav}>
             ← Back to Work
           </Link>
-          <p className={styles.eyebrow}>Full-Stack Platform</p>
-          <h1 className={styles.title}>TaskFlow</h1>
+          <h1 className={styles.title}>VRT</h1>
           <p className={styles.description}>
-            A robust, real-time task management platform built on the MERN stack and integrated with AI. Designed to handle complex workflows with a focus on speed, clarity, and visual minimalism.
+            An interactive website for the rocketry club of my college, showcasing their journey, harships, and achievements.
           </p>
 
           <div className={styles.metaGrid}>
@@ -27,15 +26,15 @@ export default function VGECRocketryPage() {
             </div>
             <div className={styles.metaItem}>
               <span className={styles.metaLabel}>Timeline</span>
-              <span className={styles.metaValue}>June 2026</span>
+              <span className={styles.metaValue}>December 2024</span>
             </div>
             <div className={styles.metaItem}>
               <span className={styles.metaLabel}>Context</span>
-              <span className={styles.metaValue}>Personal Project</span>
+              <span className={styles.metaValue}>Team Project</span>
             </div>
             <div className={styles.metaItem}>
               <span className={styles.metaLabel}>Tech</span>
-              <span className={styles.metaValue}>React, Node.js, MongoDB, Redis, Resend, Vercel, Render, GoDaddy</span>
+              <span className={styles.metaValue}>TypeScript, Tailwind, Render, Vercel</span>
             </div>
           </div>
 
@@ -67,26 +66,6 @@ export default function VGECRocketryPage() {
       <Section>
         <div className={styles.contentBlock}>
           <FadeIn>
-            <h2 className={styles.heading}>Problem & Solution</h2>
-            <div className={styles.twoCol}>
-              <div>
-                <p className={styles.text} style={{ color: "var(--foreground)" }}>
-                  <strong>The Problem:</strong> TaskFlow didn't begin as an attempt to reinvent task management—it started as a weekend project to build something complete from the ground up. I wanted a project that would push me beyond simple CRUD applications and challenge me to design a production-ready system involving authentication, email workflows, role-based access, dashboards, and scalable backend architecture. The goal wasn't to compete with established productivity tools, but to learn how they're built.
-                </p>
-              </div>
-              <div>
-                <p className={styles.text}>
-                  <strong>The Solution:</strong> Instead of focusing on feature quantity, I focused on building features the right way. Every addition—from secure authentication and OTP verification to admin management, reminder emails, and the upcoming AI-powered task creation—was implemented as if the application were intended for real users. TaskFlow has gradually evolved into a personal engineering playground where I can experiment with modern full-stack development while emphasizing clean architecture, thoughtful UI design, and production-ready practices.
-                </p>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </Section>
-
-      <Section>
-        <div className={styles.contentBlock}>
-          <FadeIn>
             <h2 className={styles.heading}>Technical Architecture</h2>
             <p className={styles.text}>
               The application leverages a standard MERN stack but introduces specific architectural decisions to ensure scalability and real-time synchronization across multiple clients.
@@ -95,10 +74,7 @@ export default function VGECRocketryPage() {
               <div className={styles.techItem}>React 18</div>
               <div className={styles.techItem}>Node.js / Express</div>
               <div className={styles.techItem}>MongoDB / Mongoose</div>
-              <div className={styles.techItem}>Redis</div>
-              <div className={styles.techItem}>Gemini Flask</div>
-              <div className={styles.techItem}>Resend</div>
-              <div className={styles.techItem}>Render / Vercel / GoDaddy</div>
+              <div className={styles.techItem}>Render / Vercel</div>
             </div>
           </FadeIn>
         </div>
@@ -107,35 +83,11 @@ export default function VGECRocketryPage() {
       <Section>
         <div className={styles.contentBlock}>
           <FadeIn>
-            <h2 className={styles.heading}>Key Features</h2>
-            <ul className={styles.featuresList}>
-              <li className={styles.featureItem}>
-                <strong style={{ color: "var(--foreground)" }}>AI-Powered Task Creation:</strong> It introduces Gemini Flask powered natural language task creation, allowing users to create structured tasks from plain English and by speaking also, alongside monitoring and alerting for AI service health.
-              </li>
-              <li className={styles.featureItem}>
-                <strong style={{ color: "var(--foreground)" }}>Automated Email Workflows:</strong> Integrated email verification, password recovery, and scheduled reminder emails for upcoming pending tasks using cron jobs and the Resend API.
-              </li>
-              <li className={styles.featureItem}>
-                <strong style={{ color: "var(--foreground)" }}>Performace & Security:</strong> Password hashing with bcrypt, request validation, rate limiting, Helmet security headers, centralized error handling, and automatic session invalidation for deleted users.
-              </li>
-            </ul>
-          </FadeIn>
-        </div>
-      </Section>
-
-      <Section>
-        <div className={styles.contentBlock}>
-          <FadeIn>
-            <h2 className={styles.heading}>Future Iterations</h2>
-            <p className={styles.text}>
-              While the core platform is robust, the roadmap includes native mobile application wrappers using React Native, offline-first capabilities utilizing Service Workers, and an AI-driven task prioritization engine.
-            </p>
-
             <div className={styles.ctaContainer}>
-              <a href="https://vyomcodes.site" className={styles.btnPrimary}>
-                View Live Demo
+              <a href="https://vgecrocketry.space/home" className={styles.btnPrimary}>
+                View Live
               </a>
-              <a href="https://github.com/vyom-cpp/task-management-ai-web-app" className={styles.btnSecondary}>
+              <a href="https://github.com/vyom-cpp/vgec-rocketry-space" className={styles.btnSecondary}>
                 View on GitHub
               </a>
             </div>

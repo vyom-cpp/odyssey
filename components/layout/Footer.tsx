@@ -4,9 +4,9 @@ import styles from "./Footer.module.css";
 
 const socials = [
   { name: "GitHub", href: "https://github.com/vyom-cpp" },
-  { name: "LinkedIn", href: "https://linkedin.com" },
-  { name: "Twitter", href: "https://twitter.com" },
-  { name: "Read.cv", href: "https://read.cv" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/vyom-sutariya-665828263/" },
+  { name: "Twitter", href: "https://x.com/vyom_sutariya" },
+  { name: "Resume", href: "/resume.pdf" },
 ];
 
 export default function Footer() {

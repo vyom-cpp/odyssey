@@ -132,7 +132,7 @@ export default function TaskFlowPage() {
             </p>
 
             <div className={styles.ctaContainer}>
-              <a href="https://vyomcodes.site" className={styles.btnPrimary}>
+              <a href="https://tasks.vyomcodes.site" className={styles.btnPrimary}>
                 View Live Demo
               </a>
               <a href="https://github.com/vyom-cpp/task-management-ai-web-app" className={styles.btnSecondary}>

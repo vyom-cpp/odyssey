@@ -14,10 +14,10 @@ export default function JustEasePage() {
           <Link href="/work" className={styles.backNav}>
             ← Back to Work
           </Link>
-          <p className={styles.eyebrow}>Full-Stack Platform</p>
-          <h1 className={styles.title}>TaskFlow</h1>
+          <p className={styles.eyebrow}>RAG </p>
+          <h1 className={styles.title}>JustEase</h1>
           <p className={styles.description}>
-            A robust, real-time task management platform built on the MERN stack and integrated with AI. Designed to handle complex workflows with a focus on speed, clarity, and visual minimalism.
+            An AI-powered Retrieval-Augmented Generation (RAG) system designed to help citizens access judicial information through semantic search, intelligent document retrieval, and context-aware response generation.
           </p>
 
           <div className={styles.metaGrid}>
@@ -27,15 +27,15 @@ export default function JustEasePage() {
             </div>
             <div className={styles.metaItem}>
               <span className={styles.metaLabel}>Timeline</span>
-              <span className={styles.metaValue}>June 2026</span>
+              <span className={styles.metaValue}>January 2025</span>
             </div>
             <div className={styles.metaItem}>
               <span className={styles.metaLabel}>Context</span>
-              <span className={styles.metaValue}>Personal Project</span>
+              <span className={styles.metaValue}>Smart India Hackathon 2025</span>
             </div>
             <div className={styles.metaItem}>
               <span className={styles.metaLabel}>Tech</span>
-              <span className={styles.metaValue}>React, Node.js, MongoDB, Redis, Resend, Vercel, Render, GoDaddy</span>
+              <span className={styles.metaValue}>Legal AI, RAG, Sematic Seach, TypeScript, Render</span>
             </div>
           </div>
 
@@ -55,10 +55,10 @@ export default function JustEasePage() {
           <FadeIn>
             <h2 className={styles.heading}>The Overview</h2>
             <p className={styles.text}>
-              TaskFlow was born as a weekend project. The goal was to create a platform that struck the perfect balance: powerful enough for engineering teams, yet intuitive enough for everyday personal use, at first it was just managing CRUD operations, but then I thought of integrating AI in it.
+              JustEase was developed as part of the Smart India Hackathon (SIH) with the objective of improving how citizens interact with the Department of Justice's digital services. While government portals contain an enormous amount of valuable legal and procedural information, locating precise answers often requires navigating multiple websites, documents, and databases. The project explores how Retrieval-Augmented Generation (RAG) can simplify this process by enabling users to ask questions in natural language and receive responses grounded in official judicial sources.
             </p>
             <p className={styles.text}>
-              The application follows a modern full-stack architecture, emphasizing scalability, security, and user experience. From email verification and password recovery to an admin dashboard, automated reminder emails, and AI-powered natural language task creation using voice recognition, every feature is designed with real-world usability in mind. The interface embraces a premium dark-first aesthetic with thoughtful spacing, subtle animations, and responsive layouts, creating an experience that feels fast, intuitive, and polished across desktop and mobile devices.
+              Rather than relying solely on a large language model, JustEase combines semantic search, document retrieval, and modern language models to produce factual, context-aware responses. The architecture was designed to be modular and scalable, allowing future integration with additional government departments while maintaining transparency, traceability, and high retrieval accuracy.
             </p>
           </FadeIn>
         </div>
@@ -71,12 +71,12 @@ export default function JustEasePage() {
             <div className={styles.twoCol}>
               <div>
                 <p className={styles.text} style={{ color: "var(--foreground)" }}>
-                  <strong>The Problem:</strong> TaskFlow didn't begin as an attempt to reinvent task management—it started as a weekend project to build something complete from the ground up. I wanted a project that would push me beyond simple CRUD applications and challenge me to design a production-ready system involving authentication, email workflows, role-based access, dashboards, and scalable backend architecture. The goal wasn't to compete with established productivity tools, but to learn how they're built.
+                  <strong>The Problem:</strong> Government judicial information is distributed across multiple portals such as the Department of Justice, eCourts, NJDG, and related public repositories. Citizens often struggle to determine where information is located, what terminology to search for, and how different judicial services relate to one another. Traditional keyword-based search frequently fails when users describe their problems conversationally, creating a barrier between citizens and publicly available legal information.
                 </p>
               </div>
               <div>
                 <p className={styles.text}>
-                  <strong>The Solution:</strong> Instead of focusing on feature quantity, I focused on building features the right way. Every addition—from secure authentication and OTP verification to admin management, reminder emails, and the upcoming AI-powered task creation—was implemented as if the application were intended for real users. TaskFlow has gradually evolved into a personal engineering playground where I can experiment with modern full-stack development while emphasizing clean architecture, thoughtful UI design, and production-ready practices.
+                  <strong>The Solution:</strong> JustEase introduces a Retrieval-Augmented Generation pipeline that retrieves relevant government documents before generating a response. Instead of allowing the language model to answer from memory, the system first identifies semantically similar documents using sentence embeddings, applies intelligent query optimization techniques, routes the request to the appropriate judicial dataset, and finally generates an answer strictly from the retrieved context. This approach significantly improves factual accuracy while maintaining transparency and scalability.
                 </p>
               </div>
             </div>
@@ -89,16 +89,16 @@ export default function JustEasePage() {
           <FadeIn>
             <h2 className={styles.heading}>Technical Architecture</h2>
             <p className={styles.text}>
-              The application leverages a standard MERN stack but introduces specific architectural decisions to ensure scalability and real-time synchronization across multiple clients.
+              The system follows a modular Retrieval-Augmented Generation architecture designed for both retrieval quality and future scalability.
             </p>
             <div className={styles.techGrid}>
-              <div className={styles.techItem}>React 18</div>
-              <div className={styles.techItem}>Node.js / Express</div>
-              <div className={styles.techItem}>MongoDB / Mongoose</div>
-              <div className={styles.techItem}>Redis</div>
-              <div className={styles.techItem}>Gemini Flask</div>
-              <div className={styles.techItem}>Resend</div>
-              <div className={styles.techItem}>Render / Vercel / GoDaddy</div>
+              <div className={styles.techItem}>sBERT</div>
+              <div className={styles.techItem}>Semantic Vector Search</div>
+              <div className={styles.techItem}>Multi-representation indexing</div>
+              <div className={styles.techItem}>Multi-Query Retrieval</div>
+              <div className={styles.techItem}>Llama-8B-8191 / GPT-4o-mini / Cohere Command R+</div>
+              <div className={styles.techItem}>RAG Fusion</div>
+              <div className={styles.techItem}>Semantic Routing</div>
             </div>
           </FadeIn>
         </div>
@@ -110,13 +110,16 @@ export default function JustEasePage() {
             <h2 className={styles.heading}>Key Features</h2>
             <ul className={styles.featuresList}>
               <li className={styles.featureItem}>
-                <strong style={{ color: "var(--foreground)" }}>AI-Powered Task Creation:</strong> It introduces Gemini Flask powered natural language task creation, allowing users to create structured tasks from plain English and by speaking also, alongside monitoring and alerting for AI service health.
+                <strong style={{ color: "var(--foreground)" }}>Multi-Representation Indexing:</strong> Documents are cleaned, summarized, embedded, and indexed to improve retrieval quality while reducing search complexity.
               </li>
               <li className={styles.featureItem}>
-                <strong style={{ color: "var(--foreground)" }}>Automated Email Workflows:</strong> Integrated email verification, password recovery, and scheduled reminder emails for upcoming pending tasks using cron jobs and the Resend API.
+                <strong style={{ color: "var(--foreground)" }}>Semantic Search:</strong> Instead of relying on keywords, the system retrieves information based on semantic similarity using Sentence-BERT embeddings.
               </li>
               <li className={styles.featureItem}>
-                <strong style={{ color: "var(--foreground)" }}>Performace & Security:</strong> Password hashing with bcrypt, request validation, rate limiting, Helmet security headers, centralized error handling, and automatic session invalidation for deleted users.
+                <strong style={{ color: "var(--foreground)" }}>Advanced Query Translation:</strong> User queries are automatically expanded through Multi-Query generation, Step-Back prompting, and RAG Fusion to maximize retrieval accuracy.
+              </li>
+              <li className={styles.featureItem}>
+                <strong style={{ color: "var(--foreground)" }}>Scalable Modular Architecture:</strong> Each pipeline component—including indexing, retrieval, routing, and generation—can evolve independently as newer retrieval techniques emerge.
               </li>
             </ul>
           </FadeIn>
@@ -128,14 +131,14 @@ export default function JustEasePage() {
           <FadeIn>
             <h2 className={styles.heading}>Future Iterations</h2>
             <p className={styles.text}>
-              While the core platform is robust, the roadmap includes native mobile application wrappers using React Native, offline-first capabilities utilizing Service Workers, and an AI-driven task prioritization engine.
+              The current implementation establishes the foundation for a scalable legal information assistant. Future work includes integrating Advanced RAG techniques such as Adaptive RAG and Corrective RAG, introducing continuous learning from user feedback, expanding support for additional government datasets, and incorporating live judicial information through official APIs where available. The long-term vision is to evolve JustEase into a reusable government AI platform capable of serving multiple public departments while maintaining accuracy, transparency, and trust.
             </p>
 
             <div className={styles.ctaContainer}>
-              <a href="https://vyomcodes.site" className={styles.btnPrimary}>
-                View Live Demo
+              <a href="https://sih-2024-liard.vercel.app/" className={styles.btnPrimary}>
+                View Live
               </a>
-              <a href="https://github.com/vyom-cpp/task-management-ai-web-app" className={styles.btnSecondary}>
+              <a href="https://github.com/vyom-cpp/SIH-2024" className={styles.btnSecondary}>
                 View on GitHub
               </a>
             </div>
