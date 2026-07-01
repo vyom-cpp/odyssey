@@ -62,7 +62,7 @@ const moreProjects = [
     description: "A project based on Process Scheduling Algorithms like FCFS, SJF, Priority Scheduling etc. to help students understand the concepts in a better way and also verify their answers. 😆",
     imageSrc: processSchedulingSolverImg,
     imageAlt: "Process Scheduling Solver Home Page Image",
-    href: "https://github.com/vyom-cpp/process-scheduling-solver",
+    href: "https://process.vyomcodes.site/",
     tags: ["C"],
   },
 ];
